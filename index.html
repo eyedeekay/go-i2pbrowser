@@ -1,0 +1,113 @@
+<html>
+  <head>
+    <title>
+      goi2pbrowser
+    </title>
+    <meta name="author" content="eyedeekay" />
+    <meta name="description" content="go-i2pbrowser.git" />
+    <meta name="keywords" content="trunk" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="showhider.css" />
+  </head>
+  <body>
+    <div id="navbar">
+      <a href="#shownav">
+        Show navigation
+      </a>
+      <div id="shownav">
+        <div id="hidenav">
+          <ul>
+            <li>
+              <a href="..">
+                Up one level ^
+              </a>
+            </li>
+            <li>
+              <a href="index.html">
+                index
+              </a>
+            </li>
+          </ul>
+          <br>
+          <a href="#hidenav">
+            Hide Navigation
+          </a>
+        </div>
+      </div>
+    </div>
+    <a id="returnhome" href="/">
+      /
+    </a>
+    <h1>
+      goi2pbrowser
+    </h1>
+    <p>
+      &ndash;
+      import &ldquo;github.com/eyedeekay/go-i2pbrowser&rdquo;
+    </p>
+    <h2>
+      Usage
+    </h2>
+    <h4>
+      func  BrowseStrict
+    </h4>
+    <pre><code class="language-go">func BrowseStrict(profileDir, url string)
+</code></pre>
+    <p>
+      BrowseStrict launches a Firefox browser configured to use I2P and waits for it
+      to exit. The profile is in &ldquo;Strict&rdquo; mode
+    </p>
+    <h4>
+      func  BrowseUsability
+    </h4>
+    <pre><code class="language-go">func BrowseUsability(profileDir, url string)
+</code></pre>
+    <p>
+      BrowseUsability launches a Firefox browser configured to use I2P and waits for
+      it to exit. The profile is in &ldquo;Usability&rdquo; mode
+    </p>
+    <h4>
+      func  UnpackBase
+    </h4>
+    <pre><code class="language-go">func UnpackBase(profileDir string) (string, error)
+</code></pre>
+    <p>
+      UnpackBase unpacks a &ldquo;Strict&rdquo; mode profile into the &ldquo;profileDir&rdquo; and returns the
+      path to the profile and possibly, an error if something goes wrong. If
+      everything works, the error will be nil
+    </p>
+    <h4>
+      func  UnpackUsability
+    </h4>
+    <pre><code class="language-go">func UnpackUsability(profileDir string) (string, error)
+</code></pre>
+    <p>
+      UnpackUsability unpacks a &ldquo;Usability&rdquo; mode profile into the &ldquo;profileDir&rdquo; and
+      returns the path to the profile and possibly, an error if something goes wrong.
+      If everything works, the error will be nil
+    </p>
+    <div id="sourcecode">
+      <span id="sourcehead">
+        <strong>
+          Get the source code:
+        </strong>
+      </span>
+      <ul>
+        <li>
+          <a href="https://github.com/eyedeekay/go-i2pbrowser.git">
+            Source Repository: (https://github.com/eyedeekay/go-i2pbrowser.git)
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <iframe src="https://snowflake.torproject.org/embed.html" width="320" height="240" frameborder="0" scrolling="no"></iframe>
+    </div>
+    <div>
+      <a href="https://geti2p.net/">
+        <img src="i2plogo.png"></img>
+        I2P
+      </a>
+    </div>
+  </body>
+</html>

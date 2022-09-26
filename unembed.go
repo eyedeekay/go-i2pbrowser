@@ -19,6 +19,9 @@ func existsAlready(profileDir string) bool {
 	return false
 }
 
+// UnpackBase unpacks a "Strict" mode profile into the "profileDir" and returns the
+// path to the profile and possibly, an error if something goes wrong. If everything
+// works, the error will be nil
 func UnpackBase(profileDir string) (string, error) {
 	if existsAlready(profileDir) {
 		log.Println(profileDir, "exists already")
@@ -38,6 +41,9 @@ func UnpackBase(profileDir string) (string, error) {
 	return filepath.Join(profileDir, "i2p.firefox.base.profile"), nil
 }
 
+// UnpackUsability unpacks a "Usability" mode profile into the "profileDir" and returns the
+// path to the profile and possibly, an error if something goes wrong. If everything
+// works, the error will be nil
 func UnpackUsability(profileDir string) (string, error) {
 	if existsAlready(profileDir) {
 		log.Println(profileDir, "exists already")
