@@ -1,6 +1,3 @@
-//go:build !generate
-// +build !generate
-
 package goi2pbrowser
 
 import (
@@ -29,7 +26,7 @@ func UnpackBase(profileDir string) (string, error) {
 	}
 	os.MkdirAll(filepath.Dir(profileDir), 0755)
 	zipFile := filepath.Join(filepath.Dir(profileDir), "i2p.firefox.base.profile.zip")
-	err := ioutil.WriteFile(zipFile, baseProfile, 0644)
+	err := ioutil.WriteFile(zipFile, BaseProfile, 0644)
 	if err != nil {
 		return filepath.Join(profileDir, "i2p.firefox.base.profile"), err
 	}
@@ -51,7 +48,7 @@ func UnpackUsability(profileDir string) (string, error) {
 	}
 	os.MkdirAll(filepath.Dir(profileDir), 0755)
 	zipFile := filepath.Join(filepath.Dir(profileDir), "i2p.firefox.usability.profile.zip")
-	err := ioutil.WriteFile(zipFile, usabilityProfile, 0644)
+	err := ioutil.WriteFile(zipFile, UsabilityProfile, 0644)
 	if err != nil {
 		return filepath.Join(profileDir, "i2p.firefox.usability.profile"), err
 	}

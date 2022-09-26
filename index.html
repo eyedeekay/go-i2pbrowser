@@ -45,9 +45,27 @@
       &ndash;
       import &ldquo;github.com/eyedeekay/go-i2pbrowser&rdquo;
     </p>
+    <p>
+      Package goi2pbrowser is a package which can be used to manage an I2P browsing
+      profile using a pre-configured, common profile which is used by the I2P
+      Easy-Install bundle and the i2p.plugins.firefox profile manager. It is a Go
+      clone of i2p.plugins.firefox for use in native applications.
+    </p>
     <h2>
       Usage
     </h2>
+    <pre><code class="language-go">var BaseProfile []byte
+</code></pre>
+    <p>
+      BaseProfile is a zip of a Firefox profile with NoScript, HTTPS Everywhere, and
+      I2PIPB
+    </p>
+    <pre><code class="language-go">var UsabilityProfile []byte
+</code></pre>
+    <p>
+      UsabilityProfile is a zip of a Firefox profile with Jshelter, HTTPS Everywhere,
+      uBlock Origin, LocalCDN, OICT, and I2PIPB
+    </p>
     <h4>
       func  BrowseStrict
     </h4>
