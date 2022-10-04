@@ -47,3 +47,22 @@ func BrowseUsability(profileDir, url string) {
 	defer FIREFOX.Close()
 	<-FIREFOX.Done()
 }
+
+// BrowseApp launches a Firefox browser configured to use I2P and waits for it to exit.
+// The profile is in "Usability" mode
+func BrowseApp(profileDir, url string) {
+	var profilePath string
+	var err error
+	profilePath, err = UnpackApp(profileDir)
+	if err != nil {
+		log.Println(err)
+		return
+	}
+	FIREFOX, ERROR := fcw.BasicFirefox(profilePath, false, url)
+	if ERROR != nil {
+		log.Println(ERROR)
+		return
+	}
+	defer FIREFOX.Close()
+	<-FIREFOX.Done()
+}

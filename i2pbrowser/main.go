@@ -11,6 +11,7 @@ import (
 
 var (
 	u = flag.Bool("usability", false, "Launch in usability mode")
+	a = flag.Bool("application", false, "Launch in app mode")
 	d = flag.String("directory", defaultDir(), "Directory to store profiles in")
 )
 
@@ -35,6 +36,11 @@ func main() {
 	url := "http://127.0.0.1:7657"
 	if len(flag.Args()) > 0 {
 		url = flag.Arg(0)
+	}
+	application := *a
+	if application {
+		goi2pbrowser.BrowseApp(*d, url)
+		return
 	}
 	usability := *u
 	switch usability {
