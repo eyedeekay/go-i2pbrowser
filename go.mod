@@ -4,7 +4,7 @@ go 1.19
 
 require (
 	github.com/artdarek/go-unzip v1.0.0
-	github.com/eyedeekay/go-fpw v0.0.0-20220925184713-d1d68bd3ce7b
+	github.com/eyedeekay/go-fpw v0.0.0-20221005063555-6b2eaf1b4a9c
 	github.com/google/go-github v17.0.0+incompatible
 )
 
