@@ -12,7 +12,7 @@ import (
 
 // BrowseStrict launches a Firefox browser configured to use I2P and waits for it to exit.
 // The profile is in "Strict" mode
-func BrowseStrict(profileDir, url string) {
+func BrowseStrict(profileDir string, url ...string) {
 	var profilePath string
 	var err error
 	profilePath, err = UnpackBase(profileDir)
@@ -20,7 +20,7 @@ func BrowseStrict(profileDir, url string) {
 		log.Println(err)
 		return
 	}
-	FIREFOX, ERROR := fcw.BasicFirefox(profilePath, false, url)
+	FIREFOX, ERROR := fcw.BasicFirefox(profilePath, false, url...)
 	if ERROR != nil {
 		log.Println(ERROR)
 		return
@@ -31,7 +31,7 @@ func BrowseStrict(profileDir, url string) {
 
 // BrowseUsability launches a Firefox browser configured to use I2P and waits for it to exit.
 // The profile is in "Usability" mode
-func BrowseUsability(profileDir, url string) {
+func BrowseUsability(profileDir string, url ...string) {
 	var profilePath string
 	var err error
 	profilePath, err = UnpackUsability(profileDir)
@@ -39,7 +39,7 @@ func BrowseUsability(profileDir, url string) {
 		log.Println(err)
 		return
 	}
-	FIREFOX, ERROR := fcw.BasicFirefox(profilePath, false, url)
+	FIREFOX, ERROR := fcw.BasicFirefox(profilePath, false, url...)
 	if ERROR != nil {
 		log.Println(ERROR)
 		return
@@ -50,7 +50,7 @@ func BrowseUsability(profileDir, url string) {
 
 // BrowseApp launches a Firefox browser configured to use I2P and waits for it to exit.
 // The profile is in "Usability" mode
-func BrowseApp(profileDir, url string) {
+func BrowseApp(profileDir string, url ...string) {
 	var profilePath string
 	var err error
 	profilePath, err = UnpackApp(profileDir)
@@ -58,7 +58,7 @@ func BrowseApp(profileDir, url string) {
 		log.Println(err)
 		return
 	}
-	FIREFOX, ERROR := fcw.BasicFirefox(profilePath, false, url)
+	FIREFOX, ERROR := fcw.BasicFirefox(profilePath, false, url...)
 	if ERROR != nil {
 		log.Println(ERROR)
 		return
