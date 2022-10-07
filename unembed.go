@@ -157,9 +157,14 @@ func ForceUserChromeCSS(profile string) error {
     border-radius: 2px !important;
 }
 
-#urlbar-container,
-#nav-bar {
+#urlbar-container {
     visibility: collapse !important
+}
+
+#TabsToolbar-customization-target {
+    min-width: 50vw;
+    max-width: 50vw;
+    width: 50vw;
 }
 `
 	if err := ioutil.WriteFile(profile, []byte(userChrome), 0644); err != nil {
