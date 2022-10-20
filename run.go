@@ -53,12 +53,12 @@ func BrowseUsability(profileDir string, url ...string) {
 func BrowseApp(profileDir string, url ...string) {
 	var profilePath string
 	var err error
-	profilePath, err = UnpackApp(profileDir)
+	profilePath, err = UnpackUsability(profileDir)
 	if err != nil {
 		log.Println(err)
 		return
 	}
-	FIREFOX, ERROR := fcw.BasicFirefox(profilePath, false, url...)
+	FIREFOX, ERROR := fcw.WebAppFirefox(profilePath, false, url...)
 	if ERROR != nil {
 		log.Println(ERROR)
 		return
