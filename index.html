@@ -4,7 +4,7 @@
       goi2pbrowser
     </title>
     <meta name="author" content="eyedeekay" />
-    <meta name="description" content="go-i2pbrowser.git" />
+    <meta name="description" content="go-i2pbrowser" />
     <meta name="keywords" content="trunk" />
     <link rel="stylesheet" type="text/css" href="style.css" />
     <link rel="stylesheet" type="text/css" href="showhider.css" />
@@ -42,67 +42,120 @@
       goi2pbrowser
     </h1>
     <p>
-      &ndash;
-      import &ldquo;github.com/eyedeekay/go-i2pbrowser&rdquo;
-    </p>
-    <p>
       Package goi2pbrowser is a package which can be used to manage an I2P browsing
-      profile using a pre-configured, common profile which is used by the I2P
-      Easy-Install bundle and the i2p.plugins.firefox profile manager. It is a Go
-      clone of i2p.plugins.firefox for use in native applications.
+      profile using a pre-configured, common profile which is used by the I2P Easy-Install
+      bundle and the i2p.plugins.firefox profile manager. It is a Go clone of
+      i2p.plugins.firefox for use in native applications.
     </p>
     <h2>
-      Usage
+      Variables
     </h2>
-    <pre><code class="language-go">var BaseProfile []byte
+    <p>
+      BaseProfile is a zip of a Firefox profile with NoScript, HTTPS Everywhere, and I2PIPB
+    </p>
+    <pre><code class="language-golang">var BaseProfile []byte
 </code></pre>
     <p>
-      BaseProfile is a zip of a Firefox profile with NoScript, HTTPS Everywhere, and
-      I2PIPB
+      UsabilityProfile is a zip of a Firefox profile with Jshelter, HTTPS Everywhere, uBlock Origin, LocalCDN, OICT, and I2PIPB
     </p>
-    <pre><code class="language-go">var UsabilityProfile []byte
+    <pre><code class="language-golang">var UsabilityProfile []byte
 </code></pre>
+    <h2>
+      Functions
+    </h2>
+    <h3>
+      func
+      <a href="/run.go#L53">
+        BrowseApp
+      </a>
+    </h3>
     <p>
-      UsabilityProfile is a zip of a Firefox profile with Jshelter, HTTPS Everywhere,
-      uBlock Origin, LocalCDN, OICT, and I2PIPB
+      <code>
+        func BrowseApp(profileDir string, url ...string)
+      </code>
     </p>
-    <h4>
-      func  BrowseStrict
-    </h4>
-    <pre><code class="language-go">func BrowseStrict(profileDir, url string)
-</code></pre>
     <p>
-      BrowseStrict launches a Firefox browser configured to use I2P and waits for it
-      to exit. The profile is in &ldquo;Strict&rdquo; mode
+      BrowseApp launches a Firefox browser configured to use I2P and waits for it to exit.
+      The profile is in &ldquo;Usability&rdquo; mode
     </p>
-    <h4>
-      func  BrowseUsability
-    </h4>
-    <pre><code class="language-go">func BrowseUsability(profileDir, url string)
-</code></pre>
+    <h3>
+      func
+      <a href="/run.go#L15">
+        BrowseStrict
+      </a>
+    </h3>
     <p>
-      BrowseUsability launches a Firefox browser configured to use I2P and waits for
-      it to exit. The profile is in &ldquo;Usability&rdquo; mode
+      <code>
+        func BrowseStrict(profileDir string, url ...string)
+      </code>
     </p>
-    <h4>
-      func  UnpackBase
-    </h4>
-    <pre><code class="language-go">func UnpackBase(profileDir string) (string, error)
-</code></pre>
+    <p>
+      BrowseStrict launches a Firefox browser configured to use I2P and waits for it to exit.
+      The profile is in &ldquo;Strict&rdquo; mode
+    </p>
+    <h3>
+      func
+      <a href="/run.go#L34">
+        BrowseUsability
+      </a>
+    </h3>
+    <p>
+      <code>
+        func BrowseUsability(profileDir string, url ...string)
+      </code>
+    </p>
+    <p>
+      BrowseUsability launches a Firefox browser configured to use I2P and waits for it to exit.
+      The profile is in &ldquo;Usability&rdquo; mode
+    </p>
+    <h3>
+      func
+      <a href="/unembed.go#L22">
+        UnpackBase
+      </a>
+    </h3>
+    <p>
+      <code>
+        func UnpackBase(profileDir string) (string, error)
+      </code>
+    </p>
     <p>
       UnpackBase unpacks a &ldquo;Strict&rdquo; mode profile into the &ldquo;profileDir&rdquo; and returns the
-      path to the profile and possibly, an error if something goes wrong. If
-      everything works, the error will be nil
+      path to the profile and possibly, an error if something goes wrong. If everything
+      works, the error will be nil
     </p>
-    <h4>
-      func  UnpackUsability
-    </h4>
-    <pre><code class="language-go">func UnpackUsability(profileDir string) (string, error)
-</code></pre>
+    <h3>
+      func
+      <a href="/unembed.go#L41">
+        UnpackUsability
+      </a>
+    </h3>
     <p>
-      UnpackUsability unpacks a &ldquo;Usability&rdquo; mode profile into the &ldquo;profileDir&rdquo; and
-      returns the path to the profile and possibly, an error if something goes wrong.
-      If everything works, the error will be nil
+      <code>
+        func UnpackUsability(profileDir string) (string, error)
+      </code>
+    </p>
+    <p>
+      UnpackUsability unpacks a &ldquo;Usability&rdquo; mode profile into the &ldquo;profileDir&rdquo; and returns the
+      path to the profile and possibly, an error if something goes wrong. If everything
+      works, the error will be nil
+    </p>
+    <h2>
+      Sub Packages
+    </h2>
+    <ul>
+      <li>
+        <a href="./i2pbrowser">
+          i2pbrowser
+        </a>
+      </li>
+    </ul>
+    <hr />
+    <p>
+      Readme created from Go doc with
+      <a href="https://github.com/posener/goreadme">
+        goreadme
+      </a>
     </p>
     <div id="sourcecode">
       <span id="sourcehead">
