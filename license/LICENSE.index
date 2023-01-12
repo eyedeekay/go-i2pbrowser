@@ -1,0 +1,42 @@
+This "browser profile distribution" contains code under a number of Free
+Software and Open Source licenses. You are entitled to copies of these licenses,
+and they are distributed with this package in the "licenses" directory.
+
+  1. MIT License
+    * all original material in this repository
+  2. Mozilla Public License 2.0(From Mozilla Installer)
+    * ./src/win/i2pbrowser-mozcompat.nsi
+  3. Modified BSD License(From Tor Browser Bundle)
+    * ./src/*/user.js
+  4. GNU General Public License 2.0(NoScript and HTTPS Everywhere)
+    * ./src/*/extensions/
+  5. GNU General Public License 3.0(Part of HTTPS Everywhere)
+    * ./src/*/extensions/
+  6. GNU GPLv2 With Classpath Exception(Java libraries included via Jpackage)
+    * ./I2P
+
+Additionally, the Jpackaged I2P Router contains software which is licensed
+under multiple Free/Open Source Software Licenses.
+
+  ABOUT-Jetty.html               LICENSE-ECLIPSE-1.0.html             
+  LICENSE-Addressbook.txt        LICENSE-ElGamalDSA.txt               
+  LICENSE-Apache2.0.txt          LICENSE-FatCowIcons.txt              
+  LICENSE-BlockFile.txt          LICENSE-Feather.txt                  
+  LICENSE-Boost.txt              LICENSE-fontawesome.txt              
+  LICENSE-BSD.txt                LICENSE-forked-subprocess.swift.txt  
+  LICENSE-CC0-1.0-Universal.txt  LICENSE-Foxtrot.txt                  
+  LICENSE-Cryptix.txt            LICENSE-FugueIcons.txt               
+  LICENSE-DesktopGUI.txt         LICENSE-GPLv2.txt                    
+  LICENSE-GPLv3.txt              LICENSE-LGPLv2.1.txt       
+  LICENSE-Launch4j.txt           LICENSE-SilkIcons.txt
+  LICENSE-HashCash.txt           LICENSE-LGPLv3.txt         
+  LICENSE-I2PTunnel.txt          LICENSE-Ministreaming.txt  
+  LICENSE-Identicon.txt          LICENSE-NDT.txt            
+  LICENSE-InstallCert.txt        LICENSE-Noise.txt          
+  LICENSE-jBCrypt.txt            LICENSE-sbt-wrapper.txt    
+  LICENSE-JGoodies-Forms.txt     LICENSE-Scala.md           
+  LICENSE-JGoodies-Looks.txt     LICENSE-SHA256.txt         
+  NOTICE-Tomcat.txt              NOTICE-Jetty.html
+  LICENSE-UPnP.txt               LICENSE-SNTP.txt
+  LICENSE-Wrapper.txt            LICENSE-Undraw.txt
+  LICENSE-XStream.txt            NOTICE-Commons-Logging.txt
