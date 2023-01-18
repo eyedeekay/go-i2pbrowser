@@ -1,5 +1,5 @@
-github.com/eyedeekay/go-fpw v0.0.5 h1:y0E1ETwWBVQodkdAiN21cGqtLs0FdYr4tHZahmgqoQY=
-github.com/eyedeekay/go-fpw v0.0.5/go.mod h1:OZD3uVWaZcd9uKc7JyZHXfFpEwkMg09EfcHmYjenVRw=
+github.com/eyedeekay/go-fpw v0.0.6 h1:fpH4s/2PFX72/ngZRtJYg4OOuY8E+iOz9e7L3ujSBO0=
+github.com/eyedeekay/go-fpw v0.0.6/go.mod h1:OZD3uVWaZcd9uKc7JyZHXfFpEwkMg09EfcHmYjenVRw=
 github.com/eyedeekay/go-unzip v0.0.0-20220914222511-f2936bba53c2 h1:2ugjFSEUAduRk1lp5dSw19771HTZL8e37QSXjiiC7P4=
 github.com/eyedeekay/go-unzip v0.0.0-20220914222511-f2936bba53c2/go.mod h1:LRwT8AnFFHRm/oj++niZMHsi3o4rNDr1lN61xwHgFgI=
 github.com/google/go-cmp v0.5.2 h1:X2ev0eStA3AbceY54o37/0PQ/UWqKEiiO2dKL5OPaFM=
