@@ -1,7 +1,7 @@
 VERSION=0.0.8
 
 fmt:
-	gofmt -w -s *.go
+	find . -name '*.go' -exec gofumpt -w -s -extra {} \;
 
 release: fmt
 	gothub release -p -u eyedeekay -r "go-i2pbrowser" -t v$(VERSION) -n "lib" -d "tag for release"

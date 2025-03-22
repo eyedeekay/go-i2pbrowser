@@ -11,12 +11,22 @@ import (
 	"net/http"
 	"os"
 	"path/filepath"
+	"strings"
 
 	"github.com/google/go-github/github"
 )
 
 var owner = "eyedeekay"
 var repo = "i2p.plugins.firefox"
+
+func validVersion(name string) bool {
+	vers := strings.Split(name, ".")
+	if len(vers) == 3 {
+		return true
+	}
+	return false
+}
+
 
 func profileVersion() string {
 	client := github.NewClient(nil)
@@ -26,9 +36,13 @@ func profileVersion() string {
 		return "0.0.34"
 	}
 	if len(tags) > 0 {
-		latestTag := tags[0]
-		fmt.Printf("Latest tag '%s', (SHA-1: %s)\n", *latestTag.Name, *latestTag.Commit.SHA)
-		return *latestTag.Name
+		for _, tag := range tags {
+			if validVersion(*tag.Name) {
+				latestTag := tag
+				fmt.Printf("Latest tag '%s', (SHA-1: %s)\n", *latestTag.Name, *latestTag.Commit.SHA)
+				return *latestTag.Name	
+			}
+		}
 	} else {
 		fmt.Printf("No tags yet\n")
 	}
